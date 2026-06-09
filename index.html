@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Axle Marketing Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0E0E0E;
+    --cream:#F2F1EA;
+    --muted:#8A8A85;
+    --muted-2:#6E6E68;
+    --line:rgba(242,241,234,.13);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    background:var(--bg);
+    color:var(--cream);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    justify-content:center;
+    padding:56px 22px 44px;
+    min-height:100%;
+  }
+  .wrap{width:100%;max-width:480px;display:flex;flex-direction:column}
+
+  /* Header */
+  .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:26px;letter-spacing:.22em;}
+  .brand-rule{width:46px;height:2px;background:var(--cream);margin-top:14px;opacity:.9;}
+
+  /* Block */
+  .block{margin-top:40px;}
+  .lang-label{
+    display:flex;align-items:center;gap:12px;
+    font-size:10.5px;letter-spacing:.32em;color:var(--muted-2);text-transform:uppercase;
+  }
+  .lang-label::after{content:"";flex:1;height:1px;background:var(--line);}
+
+  .headline{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:clamp(32px,8.5vw,42px);
+    line-height:1.0;
+    letter-spacing:-.02em;
+    margin-top:20px;
+  }
+  .headline .dot{color:var(--cream)}
+  .sub{margin-top:16px;font-size:14px;line-height:1.55;color:var(--muted);max-width:42ch;}
+
+  /* Divider between language blocks */
+  .divider{margin-top:48px;height:1px;background:var(--line);}
+
+  /* Links */
+  .links{margin-top:26px;display:flex;flex-direction:column;gap:12px;}
+  .link{
+    display:block;
+    padding:20px;
+    border:1px solid var(--line);
+    border-radius:16px;
+    color:var(--cream);
+    text-decoration:none;
+    background:transparent;
+    transition:background .25s ease,border-color .25s ease,transform .15s ease,color .25s ease;
+  }
+  .link:hover{background:var(--cream);color:var(--bg);border-color:var(--cream);transform:translateY(-2px);}
+  .link:hover .idx,.link:hover .arrow,.link:hover .desc{color:var(--bg)}
+
+  .link-top{display:flex;align-items:center;justify-content:space-between;}
+  .link-id{display:flex;align-items:baseline;gap:14px;}
+  .idx{font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:.12em;color:var(--muted);transition:color .25s ease;}
+  .label{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;letter-spacing:.01em;}
+  .arrow{font-size:17px;color:var(--muted);transition:color .25s ease,transform .25s ease;}
+  .link:hover .arrow{transform:translateX(3px)}
+  .desc{margin-top:10px;margin-left:25px;font-size:13.5px;line-height:1.5;color:var(--muted);transition:color .25s ease;max-width:42ch;}
+
+  /* Primary CTA */
+  .link.primary{background:var(--cream);color:var(--bg);border-color:var(--cream);}
+  .link.primary .idx,.link.primary .arrow,.link.primary .desc{color:#3a3a36}
+  .link.primary:hover{transform:translateY(-2px);filter:brightness(.95)}
+
+  /* Footer */
+  .footer{margin-top:48px;padding-top:22px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+  .footer span{font-size:10.5px;letter-spacing:.2em;color:var(--muted-2);text-transform:uppercase;}
+  .footer a{color:var(--muted);text-decoration:none;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;transition:color .2s ease;}
+  .footer a:hover{color:var(--cream)}
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="brand">AXLE</div>
+    <div class="brand-rule"></div>
+
+    <!-- ENGLISH BLOCK -->
+    <section class="block">
+      <div class="lang-label">English</div>
+      <h1 class="headline">Growth, with structure<span class="dot">.</span></h1>
+      <p class="sub">We put cleaning companies in front of the people already searching, and turn that into contracts. 267+ companies scaled in the U.S. Pick where to start.</p>
+
+      <nav class="links">
+        <a class="link primary" href="https://form.typeform.com/to/SMubG3Pr" target="_blank" rel="noopener">
+          <span class="link-top">
+            <span class="link-id"><span class="idx">01</span><span class="label">Book a call</span></span>
+            <span class="arrow">&rarr;</span>
+          </span>
+          <span class="desc">See in 2 minutes if your company qualifies and book a strategy call with our team. Free.</span>
+        </a>
+        <a class="link" href="https://axleleads.com" target="_blank" rel="noopener">
+          <span class="link-top">
+            <span class="link-id"><span class="idx">02</span><span class="label">axleleads.com</span></span>
+            <span class="arrow">&rarr;</span>
+          </span>
+          <span class="desc">The all in one software for cleaning companies: it finds the leads, sends the outreach, books the replies, runs your CRM and writes your proposals. In private beta, reserve your spot for $29.99 and get 6 months of PRO+ ($1,782 value) free.</span>
+        </a>
+      </nav>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- PORTUGUESE BLOCK -->
+    <section class="block">
+      <div class="lang-label">Português</div>
+      <h1 class="headline">Crescimento, com estrutura<span class="dot">.</span></h1>
+      <p class="sub">A gente coloca empresas de cleaning na frente de quem já está procurando, e transforma isso em contratos. Mais de 267 empresas escaladas nos EUA. Escolha por onde começar.</p>
+
+      <nav class="links">
+        <a class="link primary" href="https://form.typeform.com/to/iJ8KBInu" target="_blank" rel="noopener">
+          <span class="link-top">
+            <span class="link-id"><span class="idx">01</span><span class="label">Agendar uma call</span></span>
+            <span class="arrow">&rarr;</span>
+          </span>
+          <span class="desc">Veja em 2 minutos se a sua empresa se qualifica e marque uma conversa estratégica com o nosso time. Sem custo.</span>
+        </a>
+        <a class="link" href="https://axleleads.com" target="_blank" rel="noopener">
+          <span class="link-top">
+            <span class="link-id"><span class="idx">02</span><span class="label">axleleads.com</span></span>
+            <span class="arrow">&rarr;</span>
+          </span>
+          <span class="desc">O software all in one pra empresas de cleaning: encontra os leads, faz a abordagem, agenda as respostas, gerencia seu CRM e cria suas propostas. Em beta privado, reserve sua vaga por $29,99 e ganhe 6 meses de PRO+ (valor de $1.782) grátis.</span>
+        </a>
+        <a class="link" href="https://buy.stripe.com/eVq28taTS8zz0ZSh1U2wU1r" target="_blank" rel="noopener">
+          <span class="link-top">
+            <span class="link-id"><span class="idx">03</span><span class="label">O guia</span></span>
+            <span class="arrow">&rarr;</span>
+          </span>
+          <span class="desc">O passo a passo que usamos pra conquistar clientes de cleaning no mercado americano. O mesmo que agências cobram milhares pra ensinar, na sua mão hoje por $19,99.</span>
+        </a>
+      </nav>
+    </section>
+
+    <div class="footer">
+      <span>267+ empresas escaladas</span>
+      <a href="mailto:hello@axlemarketing.com">hello@axlemarketing.com</a>
+    </div>
+  </main>
+</body>
+</html>
